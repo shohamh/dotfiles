@@ -11,5 +11,5 @@ do
 done
 
 cd ~/.dotfiles/.root/
-sudo install.sh
+sudo ./install.sh
 
