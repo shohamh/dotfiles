@@ -10,6 +10,8 @@ do
     stow -v -t ~ $USER_CONF_DIR
 done
 
+
 cd ~/.dotfiles/.root/
+echo "Now going to install things that need root, if you don't want that, press Ctrl+C"
 sudo ./install.sh
 
