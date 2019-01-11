@@ -1,0 +1,1 @@
+/home/shoham/.config/fisherman/bass/functions/bass.fish

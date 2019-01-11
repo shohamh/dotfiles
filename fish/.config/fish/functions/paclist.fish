@@ -1,0 +1,1 @@
+/home/shoham/.config/fisherman/archlinux/functions/paclist.fish

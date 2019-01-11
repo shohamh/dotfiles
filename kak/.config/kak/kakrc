@@ -1,0 +1,50 @@
+
+# line numbers
+# hook global WinCreate .* %{addhl number_lines}
+
+# add brackets highlighting
+
+# hook global WinCreate .* %{addhl show_matching}
+
+# colorscheme
+
+colorscheme gruvbox
+
+# jk -> <esc>
+hook global InsertChar k %{ try %{
+  exec -draft hH <a-k>jk<ret> d
+  exec <esc>
+}}
+
+# key bindings
+map global normal <space> , -docstring 'leader (user) key'
+map global normal <backspace> <space> -docstring 'remove all sels except main'
+map global normal <a-backspace> <a-space> -docstring 'remove main sel'
+
+map global user q '<esc>:q<ret>' -docstring "quit"
+map global user w '<esc>:w<ret>; :echo Information "Written"<ret>' -docstring "save"
+map global user p '!xclip -o<ret>' -docstring "paste from clipboard"
+map global user y '<a-|>xclip -i<ret>; :echo Information "copied selection to X11 clipboard"<ret>' -docstring "copy to clipboard"
+map global user v '<esc>:tmux-new-vertical<ret>' -docstring "tmux vertical split"
+map global user h '<esc>:tmux-new-horizontal<ret>' -docstring "tmux horizontal split"
+map global insert <c-v> '<esc>'
+map global insert <c-s> '<esc>:w<ret>i'
+map global insert <tab> <c-n>
+map global normal <ret> 'A<ret><esc>'
+
+# alias
+# alias global tv tmux-repl-vertical
+# alias global th tmux-repl-vertical
+
+# Option
+set global tabstop     4
+set global indentwidth 4
+
+set global scrolloff 1,5
+
+# set global makecmd 'make --jobs=8'
+# set global grepcmd 'ag --filename --column'
+
+
+eval %sh{kak-lsp --kakoune -s $kak_session}
+nop %sh{ (kak-lsp -s $kak_session -vvv ) > /tmp/kak-lsp.log 2>&1 < /dev/null & }
