@@ -8,11 +8,11 @@ else
 endif
 
 Plug 'chriskempson/base16-vim'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/deoplete.nvim', 
 Plug 'Shougo/neco-vim'
 Plug 'sebastianmarkow/deoplete-rust'
-Plug 'SirVer/ultisnips'
-Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
+"Plug 'SirVer/ultisnips'
+"Plug 'autozimu/LanguageClient-neovim', {'do':':UpdateRemotePlugins'}
 Plug 'Shougo/denite.nvim'
 Plug 'Shougo/echodoc.vim'
 Plug 'vim-airline/vim-airline'
