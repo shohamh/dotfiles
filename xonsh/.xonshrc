@@ -2,15 +2,15 @@ $AUTO_CD = True
 #$MOUSE_SUPPORT = True
 $UPDATE_COMPLETIONS_ON_KEYPRESS = True
 $XONSH_AUTOPAIR = True
-$XONSH_COLOR_STYLE = 'native'
+#$XONSH_COLOR_STYLE = 'native'
 
-xontrib load bashisms
-xontrib load click_tabcomplete
-xontrib load free_cwd          # relevant to windows
-xontrib load fzf-widgets
-xontrib load powerline
-xontrib load z
+#xontrib load bashisms
+#xontrib load click_tabcomplete
+#xontrib load free_cwd          # relevant to windows
+#xontrib load fzf-widgets
+#xontrib load powerline
+#xontrib load z
 
-$fzf_history_binding = Keys.ControlR
-$fzf_ssh_binding = Keys.ControlS
+#$fzf_history_binding = Keys.ControlR
+#$fzf_ssh_binding = Keys.ControlS
 $PATH.append("/opt/stremio")
